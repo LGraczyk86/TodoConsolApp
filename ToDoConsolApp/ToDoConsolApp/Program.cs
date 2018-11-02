@@ -16,7 +16,7 @@ namespace ToDoConsolApp
        
         static void Main(string[] args)
         {
-         List<TaskModel> tasksModel = new List<TaskModel>();
+        List<TaskModel> tasksModel = new List<TaskModel>();
         string comment = "";
             ConsoleEx.WriteLine("Witam w Managerze Zadań ToDo".PadRight(50, '>').PadLeft(60, '<'), ConsoleColor.Red); //poprawic padleft i right
             ConsoleEx.WriteLine("W razie pomocy wpisz komendę HELP".PadRight(50, '>').PadLeft(60, '<'), ConsoleColor.Blue);
@@ -36,9 +36,13 @@ namespace ToDoConsolApp
                     {
                         AddTask.Add(tasksModel);
                     }
+                    if (comment == Comments.clear.ToString())
+                    {
+                        Console.Clear();
+                    }
                     if (comment == Comments.delete.ToString())
                     {
-                        //Todo: metoda skasowania zadania
+                        RemoveTask.Delete(tasksModel);
                     }
                     if (comment == Comments.load.ToString())
                     {
@@ -51,7 +55,6 @@ namespace ToDoConsolApp
                     if (comment == Comments.show.ToString())
                     {
                         Show.ShowAll(tasksModel);
-                        //Todo: metoda wyswietlania zadania
                     }
                     Console.WriteLine("hej");
                 }

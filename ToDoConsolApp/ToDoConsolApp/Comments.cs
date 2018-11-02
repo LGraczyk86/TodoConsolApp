@@ -13,6 +13,8 @@ namespace ToDoConsolApp
         show,
         save,
         delete,
-        load
+        load,
+        clear,
+        exit
     }
 }

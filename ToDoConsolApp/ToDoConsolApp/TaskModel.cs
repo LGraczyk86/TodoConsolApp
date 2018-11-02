@@ -38,9 +38,6 @@ namespace ToDoConsolApp
                 else if (value == "n")
                 {
                  _flagImportant = false;
-                }
-                {
-                    
                 };
             }
         }

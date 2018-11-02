@@ -29,14 +29,14 @@ namespace ToDoConsolApp.Method
         private static void Print(string description, string startData, string finishData, string important)
         {
             Console.Write(description.PadLeft(30));
-            Console.Write("|");
+            ConsoleEx.Write("|", ConsoleColor.DarkMagenta);
             Console.Write(startData.PadLeft(20));
-            Console.Write("|");
+            ConsoleEx.Write("|", ConsoleColor.DarkMagenta);
             Console.Write(finishData.PadLeft(20));
-            Console.Write("|");
+            ConsoleEx.Write("|", ConsoleColor.DarkMagenta);
             Console.Write(important.PadLeft(10));
-            Console.WriteLine("|");
-            Console.WriteLine("".PadLeft(84, '-'));
+            ConsoleEx.WriteLine("|", ConsoleColor.DarkMagenta);
+            ConsoleEx.WriteLine("".PadLeft(84, '-'), ConsoleColor.DarkMagenta);
         }
     }
 }

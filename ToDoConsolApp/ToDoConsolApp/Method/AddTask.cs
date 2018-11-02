@@ -14,7 +14,7 @@ namespace ToDoConsolApp.Method
             ConsoleEx.Write("Podaj opis zadania: ", ConsoleColor.Cyan);
             string newTask = Console.ReadLine();
             string startData = "";
-            //todo metoda do sprawdzenia daty
+            // metoda ChecData służy do sprawdzenia daty początkowej oraz końcowej, jeśli jest wpisana
             do
             {
                 ConsoleEx.Write("Podaj datę rozpoczęcia: ", ConsoleColor.Cyan);
@@ -35,16 +35,14 @@ namespace ToDoConsolApp.Method
             {
                 ConsoleEx.Write("Podaj datę zakończenia: ", ConsoleColor.Cyan);
                 finishData = Console.ReadLine();
-                ConsoleEx.Write("Podaj datę rozpoczęcia: ", ConsoleColor.Cyan);
-                startData = Console.ReadLine();
-
-                if (ChecData(startData) == false)
-                {
-                    Console.WriteLine("Błedny format daty. Dostępny format: dd.mm.yyyy");
-                }
-                else if (finishData=="")
+                
+                if (finishData == "")
                 {
                     break;
+                }
+                else if ( ChecData(finishData) == false)
+                {
+                    Console.WriteLine("Błedny format daty. Dostępny format: dd.mm.yyyy"); ;
                 }
                 else
                 {
@@ -93,7 +91,7 @@ namespace ToDoConsolApp.Method
             }
         }
 
-        private static bool ChecData(string data)
+        private static bool ChecData(string data) //metoda sprawdzająca popraność daty
         {
             Dictionary<int, int> daysOfMonth = new Dictionary<int, int>
             {
