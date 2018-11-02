@@ -40,7 +40,7 @@ namespace ToDoConsolApp
                     {
                         Console.Clear();
                     }
-                    if (comment == Comments.delete.ToString())
+                    if (comment == Comments.remove.ToString())
                     {
                         RemoveTask.Delete(tasksModel);
                     }
@@ -50,7 +50,7 @@ namespace ToDoConsolApp
                     }
                     if (comment == Comments.save.ToString())
                     {
-                        //Todo: metoda zapisania zadania
+                        SaveTasks.Save(tasksModel);
                     }
                     if (comment == Comments.show.ToString())
                     {

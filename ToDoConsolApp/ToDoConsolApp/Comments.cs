@@ -12,7 +12,7 @@ namespace ToDoConsolApp
         add,
         show,
         save,
-        delete,
+        remove,
         load,
         clear,
         exit
