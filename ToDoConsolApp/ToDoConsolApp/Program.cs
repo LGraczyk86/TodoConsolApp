@@ -30,7 +30,7 @@ namespace ToDoConsolApp
                     if (comment == Comments.help.ToString())
                     {
                         ConsoleEx.Write("Lista dostępnych komend: ", ConsoleColor.Blue);
-                        ConsoleEx.WriteLine(string.Join("; ", Enum.GetNames(typeof(Comments))), ConsoleColor.Blue);
+                        ConsoleEx.WriteLine(string.Join("; ", Enum.GetNames(typeof(Comments))), ConsoleColor.Yellow);
                     }
                     if (comment == Comments.add.ToString())
                     {
@@ -46,7 +46,7 @@ namespace ToDoConsolApp
                     }
                     if (comment == Comments.load.ToString())
                     {
-                        //Todo: metoda załadowania zadania
+                        LoaderTasks.Load(tasksModel);
                     }
                     if (comment == Comments.save.ToString())
                     {

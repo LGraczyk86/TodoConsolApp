@@ -18,19 +18,19 @@ namespace ToDoConsolApp.Method
                 string newText = "";
                 if (tasks.ElementAt(i).FinishDate.HasValue)
                 {
-                 newText = $"{tasks.ElementAt(i).Task}, {tasks.ElementAt(i).StarDate.ToShortDateString()}, {tasks.ElementAt(i).FinishDate.Value.ToShortDateString()}, {tasks.ElementAt(i).FlagImportant}";
+                 newText = $"{tasks.ElementAt(i).Task}, {tasks.ElementAt(i).StarDate.ToShortDateString()}, {tasks.ElementAt(i).FinishDate.Value.ToShortDateString()}, {tasks.ElementAt(i).FlagaAllDays}, {tasks.ElementAt(i).FlagImportant}";
                 }
                 else
                 {
                     //string newFinishData = tasks.ElementAt(i).FinishDate.ToString();
 
-                 newText = $"{tasks.ElementAt(i).Task}, {tasks.ElementAt(i).StarDate.ToShortDateString()}, , {tasks.ElementAt(i).FlagImportant}";
+                 newText = $"{tasks.ElementAt(i).Task}, {tasks.ElementAt(i).StarDate.ToShortDateString()}, , {tasks.ElementAt(i).FlagaAllDays}, {tasks.ElementAt(i).FlagImportant}";
                 }
 
                 tab[i] += newText;
 
             }
-            File.WriteAllLines("Data.csv", tab);
+            File.WriteAllLines("Data.csv", tab, Encoding.Unicode);
             ConsoleEx.WriteLine("Plik został zapisany", ConsoleColor.Yellow);
             Process.Start("Data.csv");
         }

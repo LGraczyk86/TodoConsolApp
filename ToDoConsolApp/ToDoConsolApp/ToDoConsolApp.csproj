@@ -46,6 +46,7 @@
     <Compile Include="Comments.cs" />
     <Compile Include="ConsoleEx.cs" />
     <Compile Include="Method\AddTask.cs" />
+    <Compile Include="Method\LoaderTasks.cs" />
     <Compile Include="Method\RemoveTask.cs" />
     <Compile Include="Method\SaveTasks.cs" />
     <Compile Include="Method\Show.cs" />
